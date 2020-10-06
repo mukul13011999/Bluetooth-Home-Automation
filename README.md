@@ -1,64 +1,41 @@
-# Bluetooth-Home-Automation
+#IoT Home Automation using Blynk & NodeMCU ESP8266
 
 ### Description
-A solution to control home appliances using a Bluetooth device (an Android smartphone).
+A solution to control home appliances using a Internet device (an Android smartphone).
 
 This repository consists of source code for an Android app as well as Arduino configuration.
 
 ### Requirements
 Before you begin, ensure you have the following:
-
-1. Arduino development board
-2. HC-05 or HC-06 Bluetooth module
-3. 5V DC / 220V AC relays
-4. Android Bluetooth device
-5. Connecting wires.
-
+S.N.	Components Name	Description	Quantity	
+1	NodeMCU	ESP8266-12E Board	1	https://amzn.to/2LbvQIa
+2	Relay	5V Relay	4	https://amzn.to/39l0fPD
+3	Voltage Regulator IC	LM7805 5V IC	1	https://amzn.to/2W73u7H
+4	Female DC Power Jack	DCJ0202	1	https://amzn.to/3enmlC0
+5	Diode	1N4007	4	https://amzn.to/2WMwoKU
+6	Resistor	330ohm	5	https://amzn.to/2EcRUC2
+7	NPN Transistor	BC547	4	https://amzn.to/32Pa0V4
+8	Terminal Block	5mm	4	https://amzn.to/3jIBdPc
+9	LED	5mm LED Any Color	1	https://amzn.to/3iQx0Zi
+10	Female Header	2.54mm Female Header	2 Set	https://amzn.to/2Zd64eq
 ### Steps to set up Arduino
-Complete the following steps to set up Arduino. You can use the [Arduino documentation](https://www.arduino.cc/en/Guide/HomePage) for reference:
-
-* Upload the Arduino code in the repository root for the Arduino controller
-* Connect PIN 11(TX) pin of Arduino to RX pin of HC-05
-* Connect PIN 10(RX) pin of Arduino to TX pin of HC-05
-* Connect 5V of Arduino to V<sub>in</sub> of HC-05 and V<sub>cc</sub> of relays
-* Connect GND of Arduino to GND of HC-05 and GND of relays
-* Connect IN of relay to PIN 13 of Arduino board(you are free to use any pin and also multiple pins, just update the arduino code)
-* Connect 220V AC Line to Pole and Load(appliance) to NO of the relay
-* Power the Arduino board and you're ready to use. Refer to circuit diagram for setup:
+Complete the following steps to set up NodeMcu. 
+and Blink App
 
 ### Circuit Diagram
 ![Circuit diagram](https://raw.githubusercontent.com/KManiKumarReddy/Bluetooth-Home-Automation/master/circuit.png)
 
 ### How to use
-* Build and install the app on an Android Bluetooth device.
-* Turn Bluetooth ON and pair with HC-05 using the default passcode '1234' (Feel free to change this).
-* Open the app, click on select controller and select the HC-05
-* Use ON/OFF buttons to control the appliance.
+You can download the Blynk Application from Playstore if you an Android User. You can also install the Blynk Application on IOS from App Store.
+
+Now lets setup the Blynk App for IoT Home Automation Project. First, open the application and create a new account using your Email ID. Then click on “New Project“.
 
 ### Purpose
-Mini Project for Bachelor of Technology, CVR College of Engineering, Hyderabad
+Mini Project for Bachelor of Technology, 
 
 
 ### Android Application
- - Features
-    1) Send Signals via Bluetooth.
-    2) List of Available Devices.
-    3) Switch On/Off any devices.
+ -Here is a Blynk Based Home Automation Code, you can copy the code and paste it in your Arduino IDE. But before that, you need to add Blynk Library to Arduino IDE.
   
- - Tools
-    1) [Shared Preferences](https://developer.android.com/reference/android/content/SharedPreferences)
-    2) [Bluetooth Socket](https://developer.android.com/reference/android/bluetooth/BluetoothSocket)
-    3) [File](https://developer.android.com/reference/java/io/File)
-    4) [Media Store](https://developer.android.com/reference/android/provider/MediaStore)
-    5) [URI](https://developer.android.com/reference/android/net/Uri)
 
-### License
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this
-file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-Any copyright is dedicated to the Public Domain.
-http://creativecommons.org/publicdomain/zero/1.0/
-
-### Developed by
-Mani Kumar Reddy K, Pramod Deshpande and Mallikarjun K
